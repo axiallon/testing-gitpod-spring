@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:h2:./target/database/h2;DATABASE_TO_LOWER=TRUE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: 
+    initialization-mode: never
+  h2:
+    console:
+      enabled: true
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
+        type: trace
+        temp:
+          use_jdbc_metadata_defaults: true
+  flyway:
+    table: version_info
+    baselineOnMigrate: true
+    schemas: public
+    enabled: true
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO
+    org.hibernate: ERROR
+    com.axiallon: DEBUG
