@@ -12,6 +12,8 @@ Three ways to start the application:
 
   - Open `Application.java` and click on `Run` link above the main method.
 
+  - Once the application is running, you can access the Welcome page by navigating to the `Open Ports` tab and click on the `Open Browser` button for port 8080.
+
 ### Database
 
 This application uses an embedded H2 database.
