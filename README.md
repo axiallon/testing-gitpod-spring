@@ -6,11 +6,27 @@ A simple test spring-boot application generated with spring initializr.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/axiallon/testing-gitpod-spring)
 
-TODO
+### Running the Application
+
+Three ways to start the application:
+
+  - Open `Application.java` and click on `Run` link above the main method.
 
 ### Database
 
-This application uses an embedded H2 database. Database changes are managed via Flyway. The following link provides additional details regarding [Flyway Migration Concepts](https://flywaydb.org/documentation/concepts/migrations).
+This application uses an embedded H2 database.
+
+#### Database Access
+
+When the application is running, you can access the embedded H2 database via the following URL path: `/h2-console`.
+
+Use JDBC URL: `jdbc:h2:./target/database/h2`
+
+#### Database Migrations
+
+Database changes are managed via Flyway. The following link provides additional details regarding [Flyway Migration Concepts](https://flywaydb.org/documentation/concepts/migrations).
+
+The database migration scripts are located in `src/main/resources/db/migration`.
 
 ### Reference Documentation
 
